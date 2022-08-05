@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Eliminar {{ producto.titulo }} {% endblock %}
+
+{% block content %}
+
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <strong>Estás seguro de eliminar: {{ producto.titulo }}?</strong>
+        <button style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(190, 90, 90, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">Eliminar</button>
+    </form>
+</div>
+
+{% endblock %}

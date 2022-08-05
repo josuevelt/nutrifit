@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Iniciar Sesión{% endblock %}
+{% block content %}
+
+<h1>Iniciar Sesión</h1>
+<br/><br/>
+
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(190, 90, 90, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">Iniciar Sesión</button>
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Admin, edita un Producto{% endblock %}
+
+{% block content %}
+
+<div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">Actualizar</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<p class="text" style="float:left; background-color:rgb(220, 220, 220); font-size:20px; margin-top:0; padding-left:5px; padding-right:5px; padding-top:15px; border:none; width:300px; height:100%;">Deja tu entrenamiento en manos profesionales. En nutrifit te ofrecemos entrenamiento personalizado de manera presencial en la isla de Roatán, y de manera virtual a nivel nacional, complementado con un plan alimenticio diseñado ara  tus propósitos fit. <a href="#" style="text-decoratioin:none; color:rgb(10, 150, 190);">Contáctanos</a> para más información<br/><br/>Revisa nuestra sección de <a href="#" style="text-decoratioin:none; color:rgb(10, 150, 190);">Productos</a> y enterate de todos los suplementos y accesorios de gimnasio que tenemos para tí. Hacemos envíos a nivel nacional.</p>
+
+
+<br/>
+{% for producto in object_list %}
+    <div class="responsive" style="margin-bottom:15px;">
+        <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+            <img src="{{ producto.arte_imagen.url }}" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Precio: L. {{ producto.precio }}.00<br/>
+                Stock: {{ producto.cantidad_disponible}}<br/>
+                <a href="#" style="text-decoration:none; color:rgb(10, 155, 240);">Información de Producto</a><br/>
+                {% if user.id == 1 %}
+                <a href="{% url 'editar_producto' producto.pk %}" style="text-decoration:none; color:rgb(0, 90, 0);">Editar</a>
+                <a href="{% url 'eliminar_producto' producto.pk %}" style="text-decoration:none; color:rgb(200, 55, 40);">Eliminar</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% empty %}
+{% endfor %}
+
+
+
+
+
+<!--
+<ul>
+    <li class="item-de-producto"><a href="#" style="font-size: 120px;">HOLA</a></li>
+    <li class="item-de-producto"><a href="#" style="font-size: 120px;">HOLA</a></li>
+</ul>
+-->
+
+<!--
+{% for producto in object_list %}
+    {{ producto.titulo }}
+    {{ producto.precio }}
+    {{ producto.cantidad_disponible }}
+    <img src="{{ producto.arte_imagen.url }}">
+    {{ producto.categoria }}
+    <br/><br/>
+{% empty %}
+    <p>no hay nada</p>
+{% endfor %}
+-->
+
+{% endblock %}
