@@ -10,7 +10,7 @@ from .models import Producto #, Categoria
 class ProductoForm(forms.ModelForm):
     class Meta:
         model = Producto
-        fields = ("titulo", "precio", "cantidad_disponible", "arte_imagen", "categoria")
+        fields = ("titulo", "precio", "cantidad_disponible", "arte_imagen")
         #fields = ("titulo", "precio", "cantidad_disponible", "arte_imagen", "categoria")
 
         widgets = {
