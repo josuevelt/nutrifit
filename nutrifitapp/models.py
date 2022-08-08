@@ -20,7 +20,7 @@ class Producto(models.Model):
     precio = models.CharField(max_length=100)
     cantidad_disponible = models.CharField(max_length=255)
     arte_imagen = models.ImageField(null=True, blank=True,  upload_to="imagenes/")
-    categoria = models.CharField(max_length=255, default="sin categoría")
+    #categoria = models.CharField(max_length=255, default="sin categoría")
 
     def __str__(self):
         return self.titulo

@@ -16,5 +16,5 @@ class ProductoForm(forms.ModelForm):
             "titulo": forms.TextInput(attrs={"placeholder": "titulo"}),
             "precio": forms.TextInput(),
             "cantidad_dispobible": forms.TextInput(),
-            "categoria": forms.Select(choices=lista_de_categorias)
+            #"categoria": forms.Select(choices=lista_de_categorias)
         }
