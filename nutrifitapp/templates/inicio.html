@@ -8,27 +8,6 @@
 
 
 <br/>
-<!--
-{% for producto in object_list %}
-    <div class="responsive" style="margin-bottom:15px;">
-        <div class="gallery">
-            <a target="_blank" href="img_5terre.jpg">
-            <img src="{{ producto.arte_imagen.url }}" alt="Cinque Terre" width="600" height="400">
-            </a>
-            <div class="desc">Precio: L. {{ producto.precio }}.00<br/>
-                Stock: {{ producto.cantidad_disponible}}<br/>
-                <a href="#" style="text-decoration:none; color:rgb(10, 155, 240);">Información de Producto</a><br/>
-                {% if user.id == 1 %}
-                <a href="{% url 'editar_producto' producto.pk %}" style="text-decoration:none; color:rgb(0, 90, 0);">Editar</a>
-                <a href="{% url 'eliminar_producto' producto.pk %}" style="text-decoration:none; color:rgb(200, 55, 40);">Eliminar</a>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-
-{% empty %}
-{% endfor %}
--->
 
 <div class="responsive" style="margin-bottom:15px;">
         <div class="gallery">
@@ -49,25 +28,5 @@
         </div>
 </div>
 
-
-<!--
-<ul>
-    <li class="item-de-producto"><a href="#" style="font-size: 120px;">HOLA</a></li>
-    <li class="item-de-producto"><a href="#" style="font-size: 120px;">HOLA</a></li>
-</ul>
--->
-
-<!--
-{% for producto in object_list %}
-    {{ producto.titulo }}
-    {{ producto.precio }}
-    {{ producto.cantidad_disponible }}
-    <img src="{{ producto.arte_imagen.url }}">
-    {{ producto.categoria }}
-    <br/><br/>
-{% empty %}
-    <p>no hay nada</p>
-{% endfor %}
--->
 
 {% endblock %}
