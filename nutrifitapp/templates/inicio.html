@@ -8,6 +8,7 @@
 
 
 <br/>
+<!--
 {% for producto in object_list %}
     <div class="responsive" style="margin-bottom:15px;">
         <div class="gallery">
@@ -27,9 +28,34 @@
 
 {% empty %}
 {% endfor %}
+-->
 
-
-
+<div class="responsive" style="margin-bottom:15px;">
+        <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+            <img src="{% static 'nutrifitapp/images/proteina_isolada_L1200.jpg' %}" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Precio: L. 1,200.00 }}.00<br/>
+                Stock: 3<br/>
+                <!--<a href="#" style="text-decoration:none; color:rgb(10, 155, 240);">Información de Producto</a><br/>
+                {% if user.id == 1 %}
+                <a href="{% url 'editar_producto' producto.pk %}" style="text-decoration:none; color:rgb(0, 90, 0);">Editar</a>
+                <a href="{% url 'eliminar_producto' producto.pk %}" style="text-decoration:none; color:rgb(200, 55, 40);">Eliminar</a>-->
+            </div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+            <img src="{% static 'nutrifitapp/images/creatina_L990.jpg' %}" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Precio: L. 990.00 }}.00<br/>
+                Stock: 3<br/>
+                <!--<a href="#" style="text-decoration:none; color:rgb(10, 155, 240);">Información de Producto</a><br/>
+                {% if user.id == 1 %}
+                <a href="{% url 'editar_producto' producto.pk %}" style="text-decoration:none; color:rgb(0, 90, 0);">Editar</a>
+                <a href="{% url 'eliminar_producto' producto.pk %}" style="text-decoration:none; color:rgb(200, 55, 40);">Eliminar</a>-->
+            </div>
+        </div>
+</div>
 
 
 <!--
