@@ -87,23 +87,16 @@
         }
 
         /* Propiedades para esconder un texto en pantallas pequeñas */
-        @media (min-width: 400px) {
-            .text {
+        @media (max-width: 990px) {
+            .texto {
                 display: none;
             }
         }
-        @media (min-width: 992px) {
-            .text {
-                display: block;
-            }
-        }
+
+
+
 
         /* Propiedades para esconder un texto en pantallas grandes */
-        @media (max-width: 992px) {
-            .hidden-mobile {
-                display: block;
-            }
-        }
 
         @media (min-width: 992px) {
             .hidden-mobile {
@@ -182,47 +175,25 @@
   <body>
   {% load static %}
     <div class="container" style="height:1500px;">
-        <ul style="background-color:white">
-          <li class="navbar"><img src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}" style="width:90px; height:90px;"></li>
-          <div class="text">
-            <li class="dropdown" style="float:right; margin-right:30px;">
-                  <a href="javascript:void(0)" class="dropbtn" style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">CONTACTO</a>
-                <div class="dropdown-content" style="width:100px;">
-                      <a href="https://wa.me/50433127994">Whatsapp:<br/> +504 3212-7994</a>
-                </div>
-            </li>
-          </div>
-          <div class="hidden-mobile" style="float:right;">
-            <li class="navbar"><a href="https://wa.me/50433127994" style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">Whatsapp</a></li>
-          </div>
-        </ul>
         <nav class="navbar">
             <ul>
-              <li><div class="text"><a class="active" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="{% url 'inicio' %}">INICIO</a></div></li>
-              <li><div class="text"><a href="#news">SERVICIOS</a></div></li>
-              <li><div class="text"><a href="#">PRODUCTOS</a></div></li>
+              <li><div class="texto"><a class="active" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="{% url 'inicio' %}">INICIO</a></div></li>
+              <li><div class="texto"><a href="#news">SERVICIOS</a></div></li>
+              <li><div class="texto"><a href="#">PRODUCTOS</a></div></li>
+              <!--
               {% if user.id == 1 %}
-                <li><div class="text"><a href="{% url 'agregar_producto' %}">AGREGAR PRODUCTO</a></div></li>
+                <li><div class="texto"><a href="{% url 'agregar_producto' %}">AGREGAR PRODUCTO</a></div></li>
               {% endif %}
-              <li class="dropdown">
-                 <div class="text"><div class="hidden-mobile"><a href="javascript:void(0)" class="dropbtn" style="padding:13px; background-color:#04AA6D;">&#x2836;</a></div></div>
-                 <div class="dropdown-content">
-                     <a href="{% url 'inicio' %}">Inicio</a>
-                     <a href="#">Servicios</a>
-                     <a href="#">Productos</a>
-                     {% if user.id == 1 %}
-                        <a href="{% url 'agregar_producto' %}">Agregar Producto</a>
-                     {% endif %}
-                 </div>
-              </li>
 
               {% if user.is_authenticated %}
                 <li style="float:right;"><a class="navbar-link" href="{% url 'logout' %}" style="display:block; border:none; margin-top:4px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">CERRAR SESIÓN</a></li>
               {% else %}
                 <li style="float:right;"><a class="navbar-link" href="{% url 'login' %}" style="display:block; border:none; margin-top:4px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">INICIAR SESIÓN</a></li>
-                <!-- <li style="float:right;"><a class="navbar-link" href="#nada" style="display:block; border:none; margin-top:4px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">REGISTRARSE</a></li>-->
+              <li style="float:right;"><a class="navbar-link" href="#nada" style="display:block; border:none; margin-top:4px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">REGISTRARSE</a></li>
               {% endif %}
+              -->
             </ul>
+
         </nav>
         {% block content %}
 
