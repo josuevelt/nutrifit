@@ -154,6 +154,47 @@
             clear: both;
         }
 
+        /* Propiedades para imagen de nutrifit en el inicio, con un link a whastapp dentro */
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero-image {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/nutrifitapp/images/nutrifit_inicio.jpeg');
+          height: 10%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+
+        .hero-text {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+
+        .hero-text button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 10px 25px;
+          color: black;
+          background-color: #ddd;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        .hero-text button:hover {
+          background-color: #555;
+          color: white;
+        }
+
 
     </style>
   </head>
@@ -162,12 +203,17 @@
     <div class="container" style="height:1500px;">
         <ul style="background-color:white">
           <li class="navbar"><img src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}" style="width:90px; height:90px;"></li>
-          <li class="dropdown" style="float:right; margin-right:30px;">
-              <a href="javascript:void(0)" class="dropbtn" style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">CONTACTO</a>
-              <div class="dropdown-content" style="width:100px;">
-                  <a href="https://wa.me/0050433127994">Whatsapp:<br/> +504 3212-7994</a>
-              </div>
-          </li>
+          <div class="text">
+            <li class="dropdown" style="float:right; margin-right:30px;">
+                  <a href="javascript:void(0)" class="dropbtn" style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">CONTACTO</a>
+                <div class="dropdown-content" style="width:100px;">
+                      <a href="https://wa.me/50433127994">Whatsapp:<br/> +504 3212-7994</a>
+                </div>
+            </li>
+          </div>
+          <div class="hidden-mobile" style="float:right;">
+            <li class="navbar"><a href="https://wa.me/50433127994" style="display:block; border:none; margin-top:24px; margin-right:4px; background-color:rgba(10, 190, 150, 0.8); padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border-radius:10px; text-decoration:none;">Whatsapp</a></li>
+          </div>
         </ul>
         <nav class="navbar">
             <ul>
