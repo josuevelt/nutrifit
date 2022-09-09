@@ -86,11 +86,6 @@
           }
         }
 
-        /* Propiedades del imagenes de producto en inicio */
-        li.item-de-producto {
-          display: inline;
-        }
-
         /* Propiedades para esconder un texto en pantallas pequeñas */
         @media (min-width: 400px) {
             .text {
@@ -119,39 +114,24 @@
 
         /* Propiedades para fotos e info de producto (galería) */
         div.gallery {
-            border: 1px solid #ccc;
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
         }
+
         div.gallery:hover {
-            border: 1px solid #777;
+          border: 1px solid #777;
         }
+
         div.gallery img {
-            width: 100%;
-            height: auto;
+          width: 100%;
+          height: auto;
         }
+
         div.desc {
-            padding: 15px;
-            text-align: center;
-        }
-        .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 24.999%;
-        }
-        @media only screen and (max-width: 700px) {
-            .responsive {
-                width: 49.999%
-                margin: 6px 0;
-            }
-        }
-        @media only screen and (max-width: 500px) {
-            .responsive {
-                width: 100%
-            }
-        }
-        .clearfix:after {
-            content: "";
-            display: table;
-            clear: both;
+          padding: 15px;
+          text-align: center;
         }
 
         /* Propiedades para imagen de nutrifit en el inicio, con un link a whastapp dentro */
@@ -162,8 +142,8 @@
         }
 
         .hero-image {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/nutrifitapp/images/nutrifit_inicio.jpeg');
-          height: 10%;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/nutrifitapp/images/nutrifit_show_1.jpg');
+          height: 35%;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -179,7 +159,7 @@
           color: white;
         }
 
-        .hero-text button {
+        .hero-text a {
           border: none;
           outline: 0;
           display: inline-block;
@@ -188,6 +168,7 @@
           background-color: #ddd;
           text-align: center;
           cursor: pointer;
+          text-decoration: none;
         }
 
         .hero-text button:hover {
