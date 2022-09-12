@@ -86,24 +86,32 @@
           }
         }
 
-        /* Propiedades para esconder un texto en pantallas pequeñas */
-        @media (max-width: 990px) {
-            .texto {
-                display: none;
-            }
-        }
-
-
-
-
         /* Propiedades para esconder un texto en pantallas grandes */
-
-        @media (min-width: 992px) {
-            .hidden-mobile {
+        @media (min-width: 990px) {
+            .responsivados {
                 display: none;
             }
         }
 
+        @media (min-width: 990px) {
+            .responsivados {
+                display: none;
+            }
+        }
+
+        /* Propiedades para esconder un texto en pantallas pequeñas */
+
+        @media (max-width: 990px) {
+            .responsiva {
+                display: none;
+            }
+        }
+
+        @media (max-width: 990px) {
+            .responsiva {
+                display: none;
+            }
+        }
 
         /* Propiedades para fotos e info de producto (galería) */
         div.gallery {
@@ -203,9 +211,9 @@
     <div class="container" style="height:1500px;">
         <nav class="navbar">
             <ul>
-              <li><div class="texto"><a class="active" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="{% url 'inicio' %}">INICIO</a></div></li>
-              <li><div class="texto"><a href="#news">SERVICIOS</a></div></li>
-              <li><div class="texto"><a href="#">PRODUCTOS</a></div></li>
+              <li><a class="active" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="{% url 'inicio' %}">INICIO</a></li>
+              <li><a href="#news">SERVICIOS</a></li>
+              <li><a href="#">PRODUCTOS</a></li>
               <!--
               {% if user.id == 1 %}
                 <li><div class="texto"><a href="{% url 'agregar_producto' %}">AGREGAR PRODUCTO</a></div></li>
