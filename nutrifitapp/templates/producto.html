@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+  <img class="mySlides w3-animate-fading" src="{% static 'nutrifitapp/images/carrusel_6_copia.jpg' %}" style="width:80%; margin-left:auto; margin-right:auto;">
+  <img class="mySlides w3-animate-fading" src="{% static 'nutrifitapp/images/carrusel_4_copia.jpg' %}" style="width:80%; margin-left:auto; margin-right:auto;">
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+</script>
+
+<p style="text-align:center; padding:50px; color:#333; font-variant:small-caps; font-size:40px;">bienvenido a nutrifit</p>
+
+
+
+
+{% endblock %}

@@ -17,6 +17,10 @@ class Inicio(ListView):
     model = Producto
     template_name = "inicio.html"
 
+class ProductosView(ListView):
+    model = Producto
+    template_name = "producto.html"
+
 class EditarProductoView(UpdateView):
     model = Producto
     template_name = "editar_producto.html"

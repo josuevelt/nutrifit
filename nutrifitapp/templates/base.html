@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>
       {% block title %}
           random
@@ -26,16 +27,16 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+            background-color: #FFF;
           }
 
           li {
             float: left;
-          }
+           }
 
           li a,  {
             display: block;
-            color: white;
+            color: #333;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -43,7 +44,7 @@
 
            li a, .dropbtn {
              display: inline-block;
-             color: white;
+             color: #333;
              text-align: center;
              padding: 14px 16px;
              text-decoration: none;
@@ -77,7 +78,7 @@
            }
 
            li a:hover:not(.active) {
-            background-color: #111;
+            background-color: #FFF;
             color: #CCC;
            }
 
@@ -89,13 +90,15 @@
         /* Propiedades para esconder un texto en pantallas grandes */
         @media (min-width: 990px) {
             .responsivados {
-                display: none;
+                margin-left: 10%;
+                margin-right: 10%;
             }
         }
 
         @media (min-width: 990px) {
             .responsivados {
-                display: none;
+                margin-left: 10%;
+                margin-right: 10%;
             }
         }
 
@@ -170,7 +173,7 @@
 
         .hero-image {
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/nutrifitapp/images/nutrifit_show_1.jpg');
-          height: 35%;
+          height: 30%;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -208,12 +211,14 @@
   </head>
   <body>
   {% load static %}
+
     <div class="container" style="height:2000px;">
         <nav class="navbar">
             <ul>
-              <li><a class="active" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="{% url 'inicio' %}">INICIO</a></li>
-              <li><a href="#news">SERVICIOS</a></li>
-              <li><a href="#">PRODUCTOS</a></li>
+              <div class="clearfix"><li><a style="color:#333;" href="{% url 'inicio' %}"><img style="height:100px;" src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}"></a></li>
+              <li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px;" href="{% url 'inicio' %}">inicio</a></li>
+              <li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="#">servicios</a></li>
+              <li style=margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="{% url 'productos' %}">productos</a></li></div>
               <!--
               {% if user.id == 1 %}
                 <li><div class="texto"><a href="{% url 'agregar_producto' %}">AGREGAR PRODUCTO</a></div></li>
