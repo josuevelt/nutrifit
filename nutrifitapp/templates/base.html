@@ -46,7 +46,7 @@
              display: inline-block;
              color: #333;
              text-align: center;
-             padding: 14px 16px;
+             padding: 4px 16px;
              text-decoration: none;
            }
 
@@ -88,29 +88,28 @@
         }
 
         /* Propiedades para esconder un texto en pantallas grandes */
-        @media (min-width: 990px) {
+        @media (min-width: 800px) {
             .responsivados {
                 margin-left: 10%;
                 margin-right: 10%;
             }
         }
 
-        @media (min-width: 990px) {
+        @media (min-width: 800px) {
             .responsivados {
-                margin-left: 10%;
-                margin-right: 10%;
+                display: none;
             }
         }
 
         /* Propiedades para esconder un texto en pantallas pequeñas */
 
-        @media (max-width: 990px) {
+        @media (max-width: 800px) {
             .responsiva {
                 display: none;
             }
         }
 
-        @media (max-width: 990px) {
+        @media (max-width: 800px) {
             .responsiva {
                 display: none;
             }
@@ -215,10 +214,14 @@
     <div class="container" style="height:2000px;">
         <nav class="navbar">
             <ul>
-              <div class="clearfix"><li><a style="color:#333;" href="{% url 'inicio' %}"><img style="height:100px;" src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}"></a></li>
-              <li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px;" href="{% url 'inicio' %}">inicio</a></li>
-              <li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="#">servicios</a></li>
-              <li style=margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="{% url 'productos' %}">productos</a></li></div>
+              <div class="clearfix"><li><a style="color:#333;" href="{% url 'inicio' %}"><div class="responsiva"><img style="height:100px;" src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}"></div></a></li>
+              <div class="responsiva"><li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="{% url 'inicio' %}">inicio</a></li></div>
+              <div class="responsiva"><li style="margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="#">servicios</a></li></div>
+              <div class="responsiva"><li style=margin-top:30px;"><a style="font-variant:small-caps; font-size:19px" href="{% url 'productos' %}">productos</a></li></div></div>
+              <div class="responsivados"><li style="padding-bottom:13px;"><a style="color:#333;" href="{% url 'inicio' %}"><img style="height:50px;" src="{% static 'nutrifitapp/images/nutrifit_inicio.jpeg' %}"></a></li>
+              <div class="responsivados"><li><a style="font-variant:small-caps; font-size:19px" href="{% url 'inicio' %}">inicio</a></li></div>
+              <div class="responsivados"><li><a style="font-variant:small-caps; font-size:19px" href="#">servicios</a></li></div>
+              <div class="responsivados"><li><a style="font-variant:small-caps; font-size:19px;" href="{% url 'productos' %}">productos</a></li></div></div>
               <!--
               {% if user.id == 1 %}
                 <li><div class="texto"><a href="{% url 'agregar_producto' %}">AGREGAR PRODUCTO</a></div></li>
